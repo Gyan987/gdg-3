@@ -2,6 +2,8 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import { env } from "../config/env";
 
+const baseUrl = env.PUBLIC_BASE_URL ?? `http://0.0.0.0:${env.PORT}`;
+
 export const swaggerSpec = swaggerJSDoc({
   definition: {
     openapi: "3.0.0",
@@ -10,7 +12,7 @@ export const swaggerSpec = swaggerJSDoc({
       version: "1.0.0",
       description: "API documentation",
     },
-    servers: [{ url: `http://localhost:${env.PORT}` }],
+    servers: [{ url: baseUrl }],
     components: {
       schemas: {
         StudentInput: {

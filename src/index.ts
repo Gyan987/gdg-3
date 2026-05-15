@@ -8,7 +8,7 @@ const server = createServer(app);
 const start = async () => {
   await connectToDatabase(env.MONGODB_URI);
 
-  server.listen(env.PORT, () => {
+  server.listen(env.PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${env.PORT}`);
   });
 };
