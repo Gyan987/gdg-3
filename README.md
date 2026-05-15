@@ -12,8 +12,3 @@
 
 ## WakaTime
 ![alt text](<Screenshot 2026-05-08 211223.png>)
-
-## Setup
-1. Copy .env.example to .env and fill values.
-2. Install deps: npm install
-3. Run: npm run dev
